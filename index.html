@@ -1,27 +1,70 @@
+<!-- Define o tipo de documento como HTML5, a versão mais recente do HTML.
+     É a primeira coisa que deve aparecer em um arquivo HTML. -->
 <!DOCTYPE html>
+
+<!-- Inicia o elemento raiz do documento HTML.
+     O atributo 'lang="en"' especifica que o idioma principal do conteúdo da página é inglês.
+     (No seu caso, o conteúdo está misto, mas o 'lang' é uma boa prática para acessibilidade e SEO). -->
 <html lang="en">
 
+<!-- A seção <head> contém metadados (informações sobre o HTML) que não são exibidos diretamente na página,
+     mas são importantes para o navegador e mecanismos de busca. -->
 <head>
+    <!-- Define o conjunto de caracteres a ser usado pelo documento como UTF-8.
+         UTF-8 é um padrão universal que suporta a maioria dos caracteres e símbolos de diferentes idiomas. -->
     <meta charset="UTF-8">
+
+    <!-- Configura a viewport para design responsivo.
+         'width=device-width' faz a largura da viewport ser igual à largura do dispositivo.
+         'initial-scale=1.0' define o nível de zoom inicial quando a página é carregada pela primeira vez.
+         Isso garante que a página seja exibida corretamente em diferentes tamanhos de tela (desktops, tablets, celulares). -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cat Fact</title>
+
+    <!-- Define o título da página, que aparece na aba ou na barra de título do navegador.
+         Também é usado por mecanismos de busca. -->
+    <title>Cat Fact App</title>
+
+    <!-- Vincula um arquivo CSS externo chamado 'style.css' à página HTML.
+         'rel="stylesheet"' indica que o arquivo vinculado é uma folha de estilo.
+         'href="style.css"' especifica o caminho para o arquivo CSS. -->
     <link rel="stylesheet" href="style.css">
 </head>
 
+<!-- A seção <body> contém todo o conteúdo visível da página HTML. -->
 <body>
+    <!-- Um elemento <div> usado como um contêiner principal para agrupar outros elementos.
+         A classe 'container' é usada para aplicar estilos CSS específicos a este bloco. -->
     <div class="container">
+
+        <!-- Um cabeçalho de nível 1 (o mais importante) para o título da aplicação na página. -->
         <h1>Cat Fact App</h1>
 
+        <!-- Um elemento <button> que o usuário pode clicar.
+             O atributo 'id="factButton"' fornece um identificador único para este botão,
+             permitindo que ele seja selecionado e manipulado pelo JavaScript e estilizado pelo CSS. -->
         <button id="factButton">New Fact</button>
 
+        <!-- Outro elemento <div> usado como um contêiner para exibir o fato sobre o gato.
+             A classe 'fact-container' é usada para aplicar estilos específicos. -->
         <div class="fact-container">
+            <!-- Um elemento de parágrafo <p> para exibir o texto do fato.
+                 O atributo 'id="factText"' fornece um identificador único para este parágrafo.
+                 O texto inicial serve como um placeholder antes do primeiro fato ser carregado. -->
             <p id="factText">Click in the button to see a new fact about cats...</p>
         </div>
 
-        <button id="translateButton">Traduzir para o português</button>
-    </div>
+        <!-- Outro elemento <button>, este para a funcionalidade de tradução.
+             O atributo 'id="translateButton"' é seu identificador único.
+             O atributo 'disabled' indica que o botão está inicialmente desabilitado (não clicável).
+             Ele será habilitado via JavaScript quando houver um fato para traduzir. -->
+        <button id="translateButton" disabled>Traduzir para o português</button>
+    </div> <!-- Fim do <div class="container"> -->
 
+    <!-- Vincula um arquivo JavaScript externo chamado 'script.js' à página HTML.
+         Colocar scripts no final do <body> é uma prática comum porque garante que
+         o HTML da página (DOM) seja totalmente carregado e analisado antes que o script tente manipulá-lo.
+         'src="script.js"' especifica o caminho para o arquivo JavaScript. -->
     <script src="script.js"></script>
-</body>
+</body> <!-- Fim do <body> -->
 
-</html>
+</html> <!-- Fim do elemento <html> -->

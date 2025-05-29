@@ -1,75 +1,135 @@
+/* Estilos para o corpo (body) da página HTML */
 body {
+    /* Define como a largura e altura total de um elemento são calculadas.
+       'border-box' inclui padding e border no tamanho total, o que geralmente facilita o layout. */
     box-sizing: border-box;
+    /* Remove a margem padrão que os navegadores aplicam ao body. */
     margin: 0;
+    /* Adiciona um preenchimento interno de 20 pixels em todos os lados do body. */
     padding: 20px;
+    /* Garante que o body ocupe pelo menos 100% da altura da viewport (janela do navegador). */
     min-height: 100vh;
+    /* Ativa o layout flexbox para o body, permitindo alinhar seus filhos (o .container). */
     display: flex;
+    /* Centraliza o filho direto (.container) horizontalmente dentro do body. */
     justify-content: center;
+    /* Centraliza o filho direto (.container) verticalmente dentro do body. */
     align-items: center;
+    /* Define a cor de fundo do body para um cinza claro. */
     background-color: #f4f4f4;
+    /* Define a família de fontes principal como Arial, com uma fonte sans-serif genérica como fallback. */
     font-family: 'Arial', sans-serif;
+    /* Define a cor padrão do texto para um cinza escuro. */
     color: #333;
+    /* Centraliza o texto dentro do body (afeta elementos inline e text-like). */
     text-align: center;
 }
 
+/* Estilos para o contêiner principal da aplicação */
 .container {
+    /* Define a cor de fundo do contêiner como branco. */
     background-color: #fff;
+    /* Adiciona um preenchimento interno de 30 pixels em todos os lados do contêiner. */
     padding: 30px;
+    /* Aplica cantos arredondados de 8 pixels ao contêiner. */
     border-radius: 8px;
+    /* Adiciona uma sombra sutil ao contêiner para dar profundidade.
+       (deslocamento-x deslocamento-y blur-radius cor-com-transparência) */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Define a largura máxima do contêiner como 500 pixels. */
     max-width: 500px;
+    /* Faz com que o contêiner ocupe 100% da largura disponível até atingir o max-width. */
     width: 100%;
 }
 
+/* Estilos para o título principal (<h1>) */
 h1 {
+    /* Define a cor do texto do título para um azul acinzentado. */
     color: #2c3e50;
+    /* Adiciona uma margem inferior de 25 pixels abaixo do título. */
     margin-bottom: 25px;
 }
 
+/* Estilos para o botão de buscar fato (com ID 'factButton') */
 #factButton {
+    /* Define a cor de fundo do botão para um azul claro. */
     background-color: #3498db;
+    /* Define a cor do texto do botão como branco. */
     color: #fff;
+    /* Remove qualquer borda padrão do botão. */
     border: none;
+    /* Adiciona um preenchimento interno de 12px (vertical) e 25px (horizontal) ao botão. */
     padding: 12px 25px;
+    /* Remove qualquer sublinhado que possa aparecer em links estilizados como botões. */
     text-decoration: none;
+    /* Faz com que o botão se comporte como um bloco inline, permitindo definir padding e margens. */
     display: inline-block;
+    /* Define o tamanho da fonte do texto do botão como 16 pixels. */
     font-size: 16px;
+    /* Aplica cantos arredondados de 5 pixels ao botão. */
     border-radius: 5px;
+    /* Muda o cursor do mouse para uma "mãozinha" quando ele passa sobre o botão. */
     cursor: pointer;
+    /* Adiciona uma transição suave para a propriedade 'background-color' com duração de 0.3s e timing 'ease'.
+       Isso faz a mudança de cor no hover ser animada. */
     transition: background-color 0.3s ease;
+    /* Adiciona uma margem inferior de 20 pixels abaixo do botão. */
     margin-bottom: 20px;
 }
 
+/* Estilos para o botão de buscar fato QUANDO o mouse está sobre ele (estado :hover) */
 #factButton:hover {
+    /* Altera a cor de fundo do botão para um azul um pouco mais escuro. */
     background-color: #2980b9;
 }
 
+/* Estilos para o contêiner que exibe o fato (classe 'fact-container') */
 .fact-container {
+    /* Define a cor de fundo do contêiner do fato para um cinza bem claro. */
     background-color: #ecf0f1;
+    /* Adiciona um preenchimento interno de 15 pixels em todos os lados. */
     padding: 15px;
+    /* Aplica cantos arredondados de 5 pixels. */
     border-radius: 5px;
+    /* Define uma altura mínima de 60 pixels para evitar que o layout "pule" quando o texto muda. */
     min-height: 60px;
+    /* Ativa o layout flexbox para o contêiner do fato. */
     display: flex;
+    /* Centraliza o conteúdo (o parágrafo do fato) horizontalmente. */
     justify-content: center;
+    /* Centraliza o conteúdo (o parágrafo do fato) verticalmente. */
     align-items: center;
 }
 
+/* Estilos para o parágrafo que exibe o texto do fato (com ID 'factText') */
 #factText {
-    /* font-size: 1.1em; */
+    /* Define a altura da linha para 1.6 vezes o tamanho da fonte, melhorando a legibilidade. */
     line-height: 1.6;
+    /* Define a cor do texto do fato para um azul acinzentado escuro. */
     color: #34495e;
 }
 
+/* Estilos específicos para o botão de tradução (com ID 'translateButton') */
 #translateButton {
+    /* Define a cor de fundo do botão de tradução para um verde. */
     background-color: #2ecc71;
+    /* Adiciona uma margem superior de 15 pixels acima do botão de tradução. */
     margin-top: 15px;
+    /* Nota: Este seletor herda muitos estilos do seletor genérico de botão, como padding, border-radius, etc.,
+       pois o botão de tradução também é um <button>.
+       Se você quisesse que ele fosse muito diferente, precisaria sobrescrever mais propriedades ou usar classes. */
 }
 
+/* Estilos para o botão de tradução QUANDO o mouse está sobre ele (estado :hover) */
 #translateButton:hover {
+    /* Altera a cor de fundo do botão para um verde um pouco mais escuro. */
     background-color: #27ae60;
 }
 
+/* Estilos para o botão de tradução QUANDO está desabilitado (estado :disabled) */
 #translateButton:disabled {
+    /* Altera a cor de fundo para um cinza claro, indicando que está inativo. */
     background-color: #bdc3c7;
+    /* Muda o cursor do mouse para "not-allowed" (círculo com um traço), indicando que não pode ser clicado. */
     cursor: not-allowed;
 }
